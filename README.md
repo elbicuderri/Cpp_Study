@@ -7,7 +7,7 @@
 #include <iostream>
 #include <memory>
 
-void up_v(int value)
+void up_v(int value) // it do not work
 {
 	value++;
 }
