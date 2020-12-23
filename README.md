@@ -14,6 +14,7 @@ $ cat /root/sys/firmware/devicetree/base/serial-number
 ```cpp
 //cpp code
 #include <iostream>
+#include <cstdlib>
 #include <vector>
 #include <fstream>
 #include <string>
