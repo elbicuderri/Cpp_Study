@@ -3,7 +3,7 @@
 #### Tips for Cpp
 
 
-# read serial number nano in the docker container
+# read the serial number of the nano in the docker container
 
 ```docker
 $ docker run -itd --gpus all --name ${container name} -v /sys:/root/sys $[image name or ID}
