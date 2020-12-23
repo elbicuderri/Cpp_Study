@@ -12,14 +12,14 @@ $ cat /root/sys/firmware/devicetree/base/serial-number
 ```
 
 ```cpp
-//cpp code
+//cpp code for reading binary file
 #include <iostream>
 #include <cstdlib>
 #include <vector>
 #include <fstream>
 #include <string>
 
-template<typename T>
+template<typename T> // T is type
 std::vector<T> ReadData(const std::string& fname)
 {
     std::ifstream input(fname, std::ios::in | std::ios::binary);
@@ -46,9 +46,9 @@ std::vector<T> ReadData(const std::string& fname)
 
 int main(int argc, char** argv)
 {
-    const std::string path = "/root/sys/firmware/devicetree/base/serial-number";
+    const std::string path = argv[1];
 
-    auto unknown_data = ReadData<char>(path);
+    auto unknown_data = ReadData<char>(path); 
 
     for (auto &e : unknown_data) 
     {
