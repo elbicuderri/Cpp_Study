@@ -96,6 +96,7 @@ int main()
 ```
 
 ```cpp
+//about char array
 int main()
 {
 	__int8* a = new __int8[5];
