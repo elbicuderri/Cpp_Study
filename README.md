@@ -196,6 +196,11 @@ int main()
 > 3. ~~type을 잘 모를 때 (이건 완전 쓰레기 아니야)~~
 >
 
+```cpp
+int* const* : 값, 주소 둘다 고정
+const int* : 값 고정
+int const* : 주소 고정
+```
 
 ```cpp
 //smart ptr simple example
