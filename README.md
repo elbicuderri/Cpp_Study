@@ -95,7 +95,8 @@ int main()
 
 	auto d = std::vector<int>(a.begin() + 5, a.end() - 1);
 
-	for (auto &e : d) {
+	for (auto &e : d) 
+	{
 		std::cout << e << std::endl;
 	}
 
@@ -112,7 +113,8 @@ int main()
 	const void* b = (const void*)&a[0];
 
 	std::vector<float> c1(5);
-	for (int i = 0; i < 5; ++i) {
+	for (int i = 0; i < 5; ++i) 
+	{
 		c1[i] = ((float*)b)[i];
 	}
 
@@ -133,7 +135,8 @@ int main()
 {
 	__int8* a = new __int8[5];
 
-	for (int i = 0; i < 5; ++i) {
+	for (int i = 0; i < 5; ++i) 
+	{
 		a[i] = i + 1;
 	}
 
@@ -141,7 +144,8 @@ int main()
 
 	char* b = (char*)va;
 
-	for (int j = 0; j < 5; ++j) {
+	for (int j = 0; j < 5; ++j) 
+	{
 		if (b[j] % 2 == 0) 
 		{
 			std::cout << "even" << std::endl;
