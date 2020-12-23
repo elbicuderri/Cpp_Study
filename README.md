@@ -1,4 +1,4 @@
-# CPP_study
+# Cpp_study
 
 #### Tips for Cpp
 
