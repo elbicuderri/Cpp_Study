@@ -197,9 +197,9 @@ int main()
 >
 
 ```cpp
-int* const* : 값, 주소 둘다 고정
-const int* : 값 고정
-int const* : 주소 고정
+int* const* a; // 값, 주소 둘다 고정
+const int* b; // 값 고정
+int const* c; // 주소 고정
 ```
 
 ```cpp
