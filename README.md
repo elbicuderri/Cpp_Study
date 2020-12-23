@@ -25,7 +25,7 @@ std::vector<T> ReadData(const std::string& fname)
     if (!(input.is_open()))
     {
         std::cout << "Cannot open the file!!!" << std::endl;
-        exit(-1);
+        std::exit(-1);
     }
 
     std::vector<T> data;
