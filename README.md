@@ -196,6 +196,7 @@ int main()
 > 3. ~~type을 잘 모를 때 (이건 완전 쓰레기 아니야)~~
 >
 
+
 ```cpp
 //smart ptr simple example
 #include <iostream>
