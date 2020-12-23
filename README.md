@@ -3,6 +3,38 @@
 #### Tips for Cpp
 
 ```cpp
+//reference
+#include <iostream>
+#include <memory>
+
+void up_v(int value)
+{
+	value++;
+}
+
+void up_p(int* value) // c style 
+{
+	(*value)++;
+}
+
+void up_r(int& value) // cpp style ( c do not support this )
+{
+	value++;
+}
+
+int main()
+{
+	int a = 1;
+
+	up_r(a);
+
+	std::cout << a << std::endl;
+	
+	return 0;
+}
+```
+
+```cpp
 //cpp code for reading binary file
 #include <iostream>
 #include <cstdlib>
