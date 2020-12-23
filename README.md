@@ -197,13 +197,6 @@ int main()
 >
 
 ```cpp
-int* const* a; // 값, 주소 둘다 고정 (사실 이렇게 쓰면 안됨)
-const int* const b; // 값, 주소 둘다 고정 (사실 이렇게 쓰면 안됨)
-const int* c; // 값 고정 (사실 이렇게 쓰면 안됨)
-int const* d; // 주소 고정 (사실 이렇게 쓰면 안됨)
-```
-
-```cpp
 //smart ptr simple example
 #include <iostream>
 #include <memory>
