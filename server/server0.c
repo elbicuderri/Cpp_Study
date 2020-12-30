@@ -1,15 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <signal.h>
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <sys/un.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+
 #define DEFAULT_PROTOCOL 0
 #define MAXLINE 100
 
-// toUpper(char* in, char* out);
+void toUpper(char* in, char* out);
 
-// readLine(int fd, char* str);
+int readLine(int fd, char* str);
 
 // lower -> capital
 int main()
@@ -35,7 +39,8 @@ int main()
 
     strcpy(serverAddr.sun_path, "convert"); // socket name : "convert"
 
-    unlink("convert"); // if alreay named, delete older name
+    // unlink("convert"); // if alreay named, delete older name
+    // unix("convert"); // if alreay named, delete older name
 
     bind(sfd, (struct sockaddr*)&serverAddr, sizeof(serverAddr)); 
     // system calling -> socket name "convert" setting
@@ -56,9 +61,9 @@ int main()
             // readline from client... maybe?
             toUpper(inmsg, outmsg);
             // lower -> capital
-            write(cfd, outmsg, strlen(outmsg)+1);
+            fwrite(cfd, outmsg, strlen(outmsg)+1);
             // write letters in client
-            close(cfd);
+            pclose(cfd);
             // close client socket
             exit(0);
         }
@@ -67,7 +72,7 @@ int main()
 
 }
 
-toUpper(char* in, char* out)
+void toUpper(char* in, char* out)
 {
     int i;
     for (int i = 0; i < strlen(in); i++) 
@@ -84,7 +89,7 @@ toUpper(char* in, char* out)
     }
 }
 
-readLine(int fd, char* str)
+int readLine(int fd, char* str)
 {
     int n;
     do {
