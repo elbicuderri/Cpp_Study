@@ -1,13 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <signal.h>
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <sys/un.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+
 #define DEFAULT_PROTOCOL 0
 #define MAXLINE 100
 
-// readLine(int fd, char* str);
+int readLine(int fd, char* str);
 
 int main()
 {
@@ -38,7 +42,7 @@ int main()
     exit(0);
 }
 
-readLine(int fd, char* str)
+int readLine(int fd, char* str)
 {
     int n;
     do {
