@@ -5,7 +5,7 @@
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <sys/un.h>
-#include <netinet/in.h>
+#include <netinet/in.h>```````
 #include <arpa/inet.h>
 
 #define DEFAULT_PROTOCOL 0
@@ -61,7 +61,7 @@ int main()
             // readline from client... maybe?
             toUpper(inmsg, outmsg);
             // lower -> capital
-            fwrite(cfd, outmsg, strlen(outmsg)+1);
+            write(cfd, outmsg, strlen(outmsg)+1);
             // write letters in client
             pclose(cfd);
             // close client socket
