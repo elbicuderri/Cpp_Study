@@ -34,6 +34,46 @@ int main()
 }
 ```
 
+
+```cpp
+// constructor && destructor
+#include <iostream>
+#include <memory>
+#include <string>
+
+class Name
+{	
+public:
+	Name(std::string i) : ID(i) { std::cout << "hello " << ID << std::endl; }
+
+	~Name () { std::cout << "bye " << ID << std::endl; }
+
+private:
+	std::string ID;
+
+};
+
+int main()
+{
+  Name* a = new Name("John");
+
+  Name b("Charon");
+
+  std::unique_ptr<Name> c{ new Name("Eddy") };
+
+  std::unique_ptr<Name> d = std::make_unique<Name>("TT");
+
+  Name* e = new Name("Henry");
+
+  std::unique_ptr<Name> f(e);
+
+  // f.reset(a);
+
+	return 0;
+}
+```
+
+
 ```cpp
 //cpp code for reading binary file
 #include <iostream>
@@ -83,6 +123,8 @@ int main(int argc, char** argv)
     return 0;
 }
 ```
+
+
 ```cpp
 //vector slicing
 int main()
@@ -103,6 +145,7 @@ int main()
 	return 0;
 }
 ```
+
 
 ```cpp
 //Three ways to convert void array to float vector
@@ -128,6 +171,7 @@ int main()
 	return 0;
 }
 ```
+
 
 ```cpp
 //about char array
@@ -160,6 +204,7 @@ int main()
 }
 ```
 
+
 ```cpp
 //start using template
 template<typename T>
@@ -186,6 +231,7 @@ int main()
 	return 0;
 }
 ```
+
 
 **내가 auto를 쓰는 경우**
 >
