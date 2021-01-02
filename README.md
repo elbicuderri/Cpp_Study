@@ -2,6 +2,8 @@
 
 #### Tips for Cpp
 
+[Cpp PDF](https://mirror.adversec.com/dprk/dprk-34c4/DPRK-34C3-PDFs/ProgramingBooks/02_cppprogramming.pdf)
+
 ```cpp
 //reference
 #include <iostream>
