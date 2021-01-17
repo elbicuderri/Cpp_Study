@@ -8,13 +8,18 @@
 - constexpr : const는 run-time에 오류 발생. constexpr는 compile-time에 오류 발생. 함수 및 클래스에도 사용 가능.<br><br>
 - const : 기본적으로 const 왼쪽에 있는 키워드를 고정시킨다. 하지만 const가 가장 왼쪽에 있으면 오른쪽 것을 고정시킨다.<br><br>
 <br>
+<br>
 ## using vs typedef
+<br>
 <br>
 [using vs typedef](https://unikys.tistory.com/381)
 <br>
+<br>
 #### Tips for Cpp
 <br>
+<br>
 [Cpp PDF](https://mirror.adversec.com/dprk/dprk-34c4/DPRK-34C3-PDFs/ProgramingBooks/02_cppprogramming.pdf)
+<br>
 <br>
 ```cpp
 //reference
