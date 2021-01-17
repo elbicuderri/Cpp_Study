@@ -5,8 +5,11 @@
 - explicit : type 변환을 막기 위해(컴파일러가 저절로 하는 것을) 주로 constructor에 쓴다.<br><br>
 - class 멤버 함수 뒤의 const : 이 멤버 함수 안에서 어떤 변수도 바꿀 수 없다는 의미.<br><br>
 - virtual : 상속하는 class에서 이 멤버 함수를 override하라는 명령이라고 생각하면 됨. 이 멤버 함수를 쓰세요!(까먹지 마세요.)<br><br>
+- override : 이 멤버 함수는 parent class에서 상속받은 함수라고 알려주는 표시라고 생각하자. 도장 콱.<br><br>
 - constexpr : const는 run-time에 오류 발생. constexpr는 compile-time에 오류 발생. 함수 및 클래스에도 사용 가능.<br><br>
 - const : 기본적으로 const 왼쪽에 있는 키워드를 고정시킨다. 하지만 const가 가장 왼쪽에 있으면 오른쪽 것을 고정시킨다.<br><br>
+- noexcept : 이 키워드가 붙은 함수는 예외가 발생되어도 예외가 발생되지 않는다. 예외 안전성을 보증한다.<br><br>
+- extern "C" : C++ 에서 쓰는 이름을 C 컴파일러에서도 잘 쓰겠다. 즉, 이름을 통일하겠다 이런 의미라고 생각하자.<br><br>
 
 
 ## using vs typedef
