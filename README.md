@@ -6,7 +6,7 @@
 - class 멤버 함수 뒤의 const : 이 멤버 함수 안에서 어떤 변수도 바꿀 수 없다는 의미.<br><br>
 - virtual : 상속하는 class에서 이 멤버 함수를 override하라는 명령이라고 생각하면 됨. 이 멤버 함수를 쓰세요!(까먹지 마세요.)<br><br>
 - constexpr : const는 run-time에 오류 발생. constexpr는 compile-time에 오류 발생. 함수 및 클래스에도 사용 가능.<br><br>
-- const : 기본적으로 왼쪽에 있는 키워드를 고정시킨다. 하지만 가장 오른쪽에 있으면 오른쪽 것을 고정시킨다.<br><br>
+- const : 기본적으로 const 왼쪽에 있는 키워드를 고정시킨다. 하지만 const가 가장 오른쪽에 있으면 오른쪽 것을 고정시킨다.<br><br>
 <br>
 <br>
 
