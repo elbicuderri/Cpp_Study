@@ -254,15 +254,6 @@ int main()
 ```
 
 
-**내가 auto를 쓰는 경우**
->
-> 1. 오른쪽 항에서 너무 너무 너무 확실히 type이 보일때 그리고 너무 길때
->
-> 2. vector for문 돌릴 때
->
-> 3. ~~type을 잘 모를 때 (이거 완전 쓰레기 아니야)~~
->
-
 ```cpp
 //smart ptr simple example
 #include <iostream>
