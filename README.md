@@ -1,5 +1,17 @@
 # Cpp_study
 
+## Cpp keyword 정리(내가 이해한 바대로.. 쓴 것이다)
+
+- explicit : type 변환을 막기 위해(컴파일러가 저절로 하는 것을) 주로 constructor에 쓴다.
+- class 멤버 함수 뒤의 const : 이 멤버 함수 안에서 어떤 변수도 바꿀 수 없다는 의미.
+- virtual : 상속하는 class에서 이 멤버 함수를 override하라는 명령이라고 생각하면 됨. 이 멤버 함수를 쓰세요!
+- constexpr : const는 run-time에 오류 발생. constexpr는 compile-time에 오류 발생. 함수 및 클래스에도 사용 가능.
+<br>
+<br>
+## using vs typedef
+
+[using vs typedef](https://unikys.tistory.com/381)
+
 #### Tips for Cpp
 
 [Cpp PDF](https://mirror.adversec.com/dprk/dprk-34c4/DPRK-34C3-PDFs/ProgramingBooks/02_cppprogramming.pdf)
