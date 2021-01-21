@@ -25,6 +25,10 @@
 // Piscataway, NJ: IEEE Press, 2008, pp. Art. 31:1-11.
 //
 
+/*
+cublas는 너무 어렵다...
+*/
+
 // Utilities and system includes
 #include <assert.h>
 #include <helper_string.h>  // helper for shared functions common to CUDA SDK samples
