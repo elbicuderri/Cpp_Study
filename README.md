@@ -22,7 +22,28 @@
 
 [Cpp PDF](https://mirror.adversec.com/dprk/dprk-34c4/DPRK-34C3-PDFs/ProgramingBooks/02_cppprogramming.pdf)
 
+```cpp
+//many_return_function
+#include <tuple>
 
+auto my_func()
+{
+        return std::tuple(123, 456, "Hi");
+}
+```
+
+```cpp
+//print tuple with different type c++17
+#include <iostream>
+#include <tuple>
+
+int main()
+{
+	std::tuple result{123, 456, "Hi"};
+	std::apply([](auto&&... args) { ((std::cout << args << std::endl), ...); }, result);
+	return 0;
+}
+```
 
 ```cpp
 //reference
@@ -30,7 +51,7 @@
 #include <memory>
 
 void up_v(int value) // it do not work
-{
+
 	value++;
 }
 
