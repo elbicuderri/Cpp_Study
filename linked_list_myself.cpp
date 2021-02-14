@@ -245,9 +245,8 @@ public:
 
 		}
 
-		else
+		else if (index > 1 && index < this->count - 1)
 		{
-			assert(index > 1 && index < this->count);
 			node* target = head->next;
 			node* before_target = head;
 			node* next_target = head->next->next;
@@ -261,8 +260,13 @@ public:
 			delete target;
 			target = nullptr;
 			count--;
+			return;
 		}
 
+		else
+		{
+			this->pop_back();
+		}
 
 	}
 
@@ -373,7 +377,10 @@ int main()
 
 	a.pop_node(4);
 
-	//a.pop_node(5); //// error
+	a.print_info();
+	a.print_list();
+
+	a.pop_node(4); 
 
 	a.print_info();
 	a.print_list();
