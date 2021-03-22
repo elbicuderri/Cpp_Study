@@ -30,6 +30,7 @@ int main()
     cout << "capacity: " << (int)a.capacity() << endl;
     a.push_back(vector<int>{0, 1, 9, 3});
     cout << "capacity: " << (int)a.capacity() << endl;
+    // What is difference??
 
     cout << endl;
 

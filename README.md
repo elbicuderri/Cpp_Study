@@ -12,6 +12,70 @@
 - noexcept : 이 키워드가 붙은 함수는 예외가 발생되어도 예외가 발생되지 않는다. 예외 안전성을 보증한다.<br><br>
 - extern "C" : C++ 에서 쓰는 이름을 C 컴파일러에서도 잘 쓰겠다. 즉, 이름을 통일하겠다 이런 의미라고 생각하자.<br><br>
 
+## rvalue reference
+```cpp
+int a = 1;
+int& b = a; // lvalue reference
+
+class Test
+{
+private:
+    int m_Int;
+
+public:
+    Test() : m_Int(0) {}
+
+    Test(const int& val) : m_Int(val) { cout << "Lvalue!!" << endl; }
+
+    Test(int&& val) : m_Int(move(val)) { cout << "Rvalue!!" << endl; }
+
+    ~Test() {}
+
+    void Print() const { cout << m_Int << endl; }
+
+};
+
+	//// 
+	Test x(a);
+	Test y(b);
+	Test z(1); // this is rvalue reference
+	////============================================================================///
+	
+	std::string c = "Hi";
+	
+    std::vector<std::string> v;
+
+    v.push_back(c);
+
+    std::cout << c << std::endl;
+
+    v.push_back(std::move(c)); // this is important -> c is gone~~
+
+    std::cout << c << std::endl;
+
+    std::cout << v[0] << ", " << v[1] << std::endl;
+
+```
+
+## push_back vs emplace_back
+> **Use push_back**
+```cpp
+#include <iostream>
+#include <vector>
+
+int main()
+{
+    std::vector<std::vector<int>> vec1;
+
+    std::vector<std::vector<int>> vec2;
+
+    vec1.emplace_back(2000000000); // not error , but it's not what you want
+
+    vec2.push_back(2000000000); // error
+
+    return 0;
+}
+```
 
 ## using vs typedef
 
@@ -28,7 +92,7 @@
 
 auto my_func()
 {
-        return std::tuple(123, 456, "Hi");
+    return std::tuple(123, 456, "Hi");
 }
 ```
 

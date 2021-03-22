@@ -11,7 +11,7 @@ struct AllocationMetrics
 
 static AllocationMetrics s_AllocationMetrics;
 
-void* operator new(size_t size)
+void* operator new(size_t size) // operator new overriding
 {
 
 	s_AllocationMetrics.TotalAllocated += size;
@@ -20,7 +20,7 @@ void* operator new(size_t size)
 
 }
 
-void operator delete(void* memory, size_t size)
+void operator delete(void* memory, size_t size) // operator delete overriding
 {
 
 	s_AllocationMetrics.TotalFreed += size;
