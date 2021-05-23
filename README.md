@@ -1,6 +1,6 @@
 # Cpp_study
 
-## Cpp keyword 정리(내가 이해한 바대로.. 쓴 것이다)
+## Cpp keyword 정리(내가 이해한 바대로)
 
 - explicit : type 변환을 막기 위해(컴파일러가 저절로 하는 것을) 주로 constructor에 쓴다.<br><br>
 - class 멤버 함수 뒤의 const : 이 멤버 함수 안에서 어떤 변수도 바꿀 수 없다는 의미.<br><br>
